@@ -48,7 +48,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReference2\Reference.cs">
+    <Compile Include="Service References\DebugReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -57,100 +62,192 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="micropos.config" />
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.AuthorizationResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.AuthorizationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.AvailableDevicesResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.AvailableDevicesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.CancelPinpadCommandResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.CancelPinpadCommandResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.CancelResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.CancelResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.ClosePinpadConnectionResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.ClosePinpadConnectionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.CompletionResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.CompletionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetAllPinpadsResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetAllPinpadsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetAmountResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetAmountResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetAvailableDevicesResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetAvailableDevicesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetFirstDeviceAvailableResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetFirstDeviceAvailableResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetItkLengthResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetItkLengthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetKeyResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetKeyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetNumericInputResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetNumericInputResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetOneOrFirstPinpadResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetOneOrFirstPinpadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.GetSecurePanResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.GetSecurePanResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.OpenPinpadConnectionResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.OpenPinpadConnectionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.PingResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.PingResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.ReadCardResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.ReadCardResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.ReadPasswordResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.ReadPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.SendAuthorizationResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.SendAuthorizationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPos.Service.SimpleApp.ServiceReference2.ShowMessageResponse.datasource">
+    <None Include="Service References\DebugReference\MicroPos.Service.SimpleApp.DebugReference.ShowMessageResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference2\micropos.xsd">
+    <None Include="Service References\DebugReference\micropos.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference2\micropos1.xsd">
+    <None Include="Service References\DebugReference\micropos1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference2\micropos2.xsd">
+    <None Include="Service References\DebugReference\micropos2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference2\micropos3.xsd">
+    <None Include="Service References\DebugReference\micropos3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference2\micropos4.xsd">
+    <None Include="Service References\DebugReference\micropos4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference2\MicroPosServiceProxy.wsdl" />
+    <None Include="Service References\DebugReference\MicroPosServiceProxy.wsdl" />
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.AuthorizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.AvailableDevicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.CancelPinpadCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.CancelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.ClosePinpadConnectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.CompletionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetAllPinpadsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetAvailableDevicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetFirstDeviceAvailableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetItkLengthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetKeyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetNumericInputResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetOneOrFirstPinpadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.GetSecurePanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.OpenPinpadConnectionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.ReadCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.ReadPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.SendAuthorizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPos.Service.SimpleApp.ServiceReference.ShowMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\micropos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\micropos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\micropos2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\micropos3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\micropos4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\MicroPosServiceProxy.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
+    <WCFMetadataStorage Include="Service References\DebugReference\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+    <None Include="Service References\DebugReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+    <None Include="Service References\DebugReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference2\Reference.svcmap">
+    <None Include="Service References\DebugReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

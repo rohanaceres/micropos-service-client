@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0aa927e9-45ab-445d-bed7-6d43453cbb16" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8583/micropos?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="micropos.xsd" MetadataType="Schema" ID="c8437552-754a-4a6c-b34f-03defabc6813" SourceId="1" SourceUrl="http://localhost:8583/micropos?xsd=xsd4" />
+    <MetadataFile FileName="micropos1.xsd" MetadataType="Schema" ID="c6013a7e-6a93-4c9e-ad20-34fe04d22506" SourceId="1" SourceUrl="http://localhost:8583/micropos?xsd=xsd2" />
+    <MetadataFile FileName="micropos2.xsd" MetadataType="Schema" ID="2dfccdce-4260-4453-b44d-f381ca5374af" SourceId="1" SourceUrl="http://localhost:8583/micropos?xsd=xsd3" />
+    <MetadataFile FileName="MicroPosServiceProxy.wsdl" MetadataType="Wsdl" ID="d09e5dff-8837-4d14-9c98-117a26f99869" SourceId="1" SourceUrl="http://localhost:8583/micropos?wsdl" />
+    <MetadataFile FileName="micropos3.xsd" MetadataType="Schema" ID="d705e2cd-d1ab-4c40-9974-a5735c8a585c" SourceId="1" SourceUrl="http://localhost:8583/micropos?xsd=xsd1" />
+    <MetadataFile FileName="micropos4.xsd" MetadataType="Schema" ID="b1af95ad-0add-42ce-ade2-7549555849f5" SourceId="1" SourceUrl="http://localhost:8583/micropos?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,6 +1,9 @@
-﻿using MicroPos.Service.SimpleApp.ServiceReference2;
+﻿#if DEBUG
+using MicroPos.Service.SimpleApp.DebugReference;
+#else
+using MicroPos.Service.SimpleApp.DebugReference;
+#endif
 using System;
-using System.Configuration;
 
 namespace MicroPos.Service.SimpleApp
 {
@@ -11,16 +14,14 @@ namespace MicroPos.Service.SimpleApp
         static void Main(string[] args)
         {
             GetOneOrFirstPinpadRequest pinpadRequest = new GetOneOrFirstPinpadRequest();
-            pinpadRequest.AuthorizerUri = "AuthorizerUri";
-            pinpadRequest.Language = "pt-BR";
-            pinpadRequest.SaleAffiliationKey = "SAK";
-            pinpadRequest.TmsUri = "TmsUri";
+            pinpadRequest.AuthorizerUri = "";
+            pinpadRequest.SaleAffiliationKey = "";
+            pinpadRequest.TmsUri = "";
 
             GetOneOrFirstPinpadResponse pinpadResponse = service.GetOneOrFirstPinpad(pinpadRequest);
 
             AuthorizationRequest authRequest = new AuthorizationRequest();
             authRequest.CardPaymentAuthorizer = pinpadResponse.CardPaymentAuthorizer;
-            authRequest.Language = "pt-BR";
             authRequest.Transaction = new TransactionContract();
             authRequest.Transaction.Amount = 0.1m;
             authRequest.Transaction.CaptureTransaction = true;
@@ -41,6 +42,10 @@ namespace MicroPos.Service.SimpleApp
             {
                 // Operação bem sucedida e transação autorizada!
             }
+
+            ClosePinpadConnectionRequest closeRequest = new ClosePinpadConnectionRequest();
+            closeRequest.CardPaymentAuthorizer = pinpadResponse.CardPaymentAuthorizer;
+            ClosePinpadConnectionResponse closeResponse = service.ClosePinpadConnection(closeRequest);
         }
     }
 }
