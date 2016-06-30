@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MicroPosServiceProxy" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8583/micropos?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8583/micropos?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8583/micropos?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MicroPos.DataContracts.Request" />
+      <xsd:import schemaLocation="http://localhost:8583/micropos?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MicroPos.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:8583/micropos?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MicroPos.DataContracts.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMicroPosService_GetOneOrFirstPinpad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneOrFirstPinpad" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetOneOrFirstPinpad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneOrFirstPinpadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAllPinpads_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPinpads" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAllPinpads_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPinpadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_AvailableDevices_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableDevices" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_AvailableDevices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetFirstDeviceAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstDeviceAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetFirstDeviceAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstDeviceAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAvailableDevices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableDevices" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAvailableDevices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_OpenPinpadConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:OpenPinpadConnection" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_OpenPinpadConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OpenPinpadConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ClosePinpadConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClosePinpadConnection" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ClosePinpadConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClosePinpadConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_CancelPinpadCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPinpadCommand" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_CancelPinpadCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPinpadCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ShowMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ShowMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetSecurePan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurePan" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetSecurePan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurePanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKey" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetNumericInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericInput" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetNumericInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumericInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmount" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Authorize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authorize" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Authorize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_CancelByAuthorizationReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelByAuthorizationReport" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_CancelByAuthorizationReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelByAuthorizationReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Cancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cancel" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_Cancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ReadCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCard" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ReadCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ReadPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPassword" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_ReadPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_SendAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_SendAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_SendCompletion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCompletion" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_SendCompletion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendCompletionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetItkLength_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItkLength" />
+  </wsdl:message>
+  <wsdl:message name="IMicroPosService_GetItkLength_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItkLengthResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMicroPosService">
+    <wsdl:operation name="GetOneOrFirstPinpad">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetOneOrFirstPinpad" message="tns:IMicroPosService_GetOneOrFirstPinpad_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetOneOrFirstPinpadResponse" message="tns:IMicroPosService_GetOneOrFirstPinpad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPinpads">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetAllPinpads" message="tns:IMicroPosService_GetAllPinpads_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetAllPinpadsResponse" message="tns:IMicroPosService_GetAllPinpads_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvailableDevices">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/AvailableDevices" message="tns:IMicroPosService_AvailableDevices_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/AvailableDevicesResponse" message="tns:IMicroPosService_AvailableDevices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstDeviceAvailable">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetFirstDeviceAvailable" message="tns:IMicroPosService_GetFirstDeviceAvailable_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetFirstDeviceAvailableResponse" message="tns:IMicroPosService_GetFirstDeviceAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableDevices">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetAvailableDevices" message="tns:IMicroPosService_GetAvailableDevices_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetAvailableDevicesResponse" message="tns:IMicroPosService_GetAvailableDevices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/Ping" message="tns:IMicroPosService_Ping_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/PingResponse" message="tns:IMicroPosService_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenPinpadConnection">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/OpenPinpadConnection" message="tns:IMicroPosService_OpenPinpadConnection_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/OpenPinpadConnectionResponse" message="tns:IMicroPosService_OpenPinpadConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePinpadConnection">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/ClosePinpadConnection" message="tns:IMicroPosService_ClosePinpadConnection_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/ClosePinpadConnectionResponse" message="tns:IMicroPosService_ClosePinpadConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPinpadCommand">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/CancelPinpadCommand" message="tns:IMicroPosService_CancelPinpadCommand_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/CancelPinpadCommandResponse" message="tns:IMicroPosService_CancelPinpadCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowMessage">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/ShowMessage" message="tns:IMicroPosService_ShowMessage_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/ShowMessageResponse" message="tns:IMicroPosService_ShowMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurePan">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetSecurePan" message="tns:IMicroPosService_GetSecurePan_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetSecurePanResponse" message="tns:IMicroPosService_GetSecurePan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetKey" message="tns:IMicroPosService_GetKey_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetKeyResponse" message="tns:IMicroPosService_GetKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericInput">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetNumericInput" message="tns:IMicroPosService_GetNumericInput_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetNumericInputResponse" message="tns:IMicroPosService_GetNumericInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmount">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetAmount" message="tns:IMicroPosService_GetAmount_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetAmountResponse" message="tns:IMicroPosService_GetAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorize">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/Authorize" message="tns:IMicroPosService_Authorize_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/AuthorizeResponse" message="tns:IMicroPosService_Authorize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelByAuthorizationReport">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/CancelByAuthorizationReport" message="tns:IMicroPosService_CancelByAuthorizationReport_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/CancelByAuthorizationReportResponse" message="tns:IMicroPosService_CancelByAuthorizationReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/Cancel" message="tns:IMicroPosService_Cancel_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/CancelResponse" message="tns:IMicroPosService_Cancel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadCard">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/ReadCard" message="tns:IMicroPosService_ReadCard_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/ReadCardResponse" message="tns:IMicroPosService_ReadCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadPassword">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/ReadPassword" message="tns:IMicroPosService_ReadPassword_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/ReadPasswordResponse" message="tns:IMicroPosService_ReadPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthorization">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/SendAuthorization" message="tns:IMicroPosService_SendAuthorization_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/SendAuthorizationResponse" message="tns:IMicroPosService_SendAuthorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCompletion">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/SendCompletion" message="tns:IMicroPosService_SendCompletion_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/SendCompletionResponse" message="tns:IMicroPosService_SendCompletion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItkLength">
+      <wsdl:input wsam:Action="http://tempuri.org/IMicroPosService/GetItkLength" message="tns:IMicroPosService_GetItkLength_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IMicroPosService/GetItkLengthResponse" message="tns:IMicroPosService_GetItkLength_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMicroPosService" type="tns:IMicroPosService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOneOrFirstPinpad">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetOneOrFirstPinpad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPinpads">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetAllPinpads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AvailableDevices">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/AvailableDevices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstDeviceAvailable">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetFirstDeviceAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableDevices">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetAvailableDevices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenPinpadConnection">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/OpenPinpadConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePinpadConnection">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/ClosePinpadConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPinpadCommand">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/CancelPinpadCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowMessage">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/ShowMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurePan">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetSecurePan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumericInput">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetNumericInput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmount">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorize">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/Authorize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelByAuthorizationReport">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/CancelByAuthorizationReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/Cancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadCard">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/ReadCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadPassword">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/ReadPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthorization">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/SendAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCompletion">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/SendCompletion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItkLength">
+      <soap:operation soapAction="http://tempuri.org/IMicroPosService/GetItkLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MicroPosServiceProxy">
+    <wsdl:port name="BasicHttpBinding_IMicroPosService" binding="tns:BasicHttpBinding_IMicroPosService">
+      <soap:address location="http://localhost:8583/micropos" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
