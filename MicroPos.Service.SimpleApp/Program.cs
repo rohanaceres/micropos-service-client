@@ -13,10 +13,18 @@ namespace MicroPos.Service.SimpleApp
 
         static void Main(string[] args)
         {
-            GetOneOrFirstPinpadRequest pinpadRequest = new GetOneOrFirstPinpadRequest();
-            pinpadRequest.AuthorizerUri = "";
-            pinpadRequest.SaleAffiliationKey = "";
-            pinpadRequest.TmsUri = "";
+			DisplayableMessagesContract messages = new DisplayableMessagesContract();
+			messages.ApprovedMessage = "^.^";
+			messages.DeclinedMessage = "-_-";
+			messages.InitializationMessage = "Ei!";
+			messages.MainLabel = "Hola, que tal?";
+			messages.ProcessingMessage = "Pensando...";
+
+			GetOneOrFirstPinpadRequest pinpadRequest = new GetOneOrFirstPinpadRequest();
+            pinpadRequest.AuthorizerUri = ""; // preencher com a URL do autorizador da Stone
+            pinpadRequest.SaleAffiliationKey = ""; // preencher com o SAK
+            pinpadRequest.TmsUri = ""; // preencher com a URL do TMS da Stone
+			pinpadRequest.PinpadMessages = messages;
 
             GetOneOrFirstPinpadResponse pinpadResponse = service.GetOneOrFirstPinpad(pinpadRequest);
 
@@ -24,6 +32,7 @@ namespace MicroPos.Service.SimpleApp
             authRequest.CardPaymentAuthorizer = pinpadResponse.CardPaymentAuthorizer;
             authRequest.Transaction = new TransactionContract();
             authRequest.Transaction.Amount = 0.1m;
+			authRequest.Language = "pt-BR";
             authRequest.Transaction.CaptureTransaction = true;
             authRequest.Transaction.InitiatorTransactionKey = Guid.NewGuid().ToString();
             authRequest.Transaction.Type = "Debit";
